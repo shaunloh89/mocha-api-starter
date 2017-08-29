@@ -12,13 +12,13 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.get('/', function (req, res) {
-  res.send('hello')
+  res.send('hello mocha')
 })
 
 app.use('/tacos', tacosController)
 
-var server = app.listen(process.env.PORT || 3000)
-console.log('Server UP')
+app.listen(process.env.PORT || 3000)
+console.log('Server UP at localhost 3000')
 
 // we export the running server so we can use it in testing
-module.exports = server
+module.exports = app
