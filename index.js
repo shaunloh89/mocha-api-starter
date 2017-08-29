@@ -5,7 +5,7 @@ var mongoose = require('mongoose')
 var tacosController = require('./controllers/tacos_controller')
 var app = express()
 
-mongoose.connect('mongodb://tacodb:password@ds115712.mlab.com:15712/placies', {
+mongoose.connect('mongodb://localhost/taco-api', {
   useMongoClient: true
 })
 
